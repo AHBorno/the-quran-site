@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import ImageLightbox from "@/components/ImageLightbox";
 
 export const metadata: Metadata = {
   title: "My Own Prayer",
@@ -197,28 +198,25 @@ export default function MyOwnPrayerPage() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((feature) => (
               <article
                 key={feature.title}
-                className="overflow-hidden rounded-2xl border border-emerald-400/10 bg-[#0a231b] transition duration-200 hover:-translate-y-1 hover:border-emerald-400/20"
+                className="group overflow-hidden rounded-2xl border border-emerald-400/10 bg-[#0a231b] transition duration-300 hover:-translate-y-1 hover:border-emerald-400/25 hover:shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
               >
-                <div className="border-b border-emerald-400/10 bg-[#071d16] p-5">
-                  <Image
+                <div className="flex min-h-[420px] items-center justify-center bg-[#071d16] p-5">
+                  <ImageLightbox
                     src={feature.image}
                     alt={`${feature.title} in My Own Prayer`}
-                    width={1200}
-                    height={800}
-                    className="h-56 w-full rounded-xl object-contain"
                   />
                 </div>
 
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-emerald-50">
+                <div className="border-t border-emerald-400/10 px-5 py-5">
+                  <h3 className="text-base font-semibold text-emerald-50">
                     {feature.title}
                   </h3>
 
-                  <p className="mt-3 text-sm leading-7 text-[#788b84]">
+                  <p className="mt-2 text-sm leading-6 text-[#788b84]">
                     {feature.description}
                   </p>
                 </div>
@@ -246,6 +244,7 @@ export default function MyOwnPrayerPage() {
                 <h3 className="font-semibold text-emerald-100">
                   1. Download the APK
                 </h3>
+
                 <p className="mt-2">
                   Download the latest beta APK using the official GitHub
                   release link on this page.
@@ -256,6 +255,7 @@ export default function MyOwnPrayerPage() {
                 <h3 className="font-semibold text-emerald-100">
                   2. Allow installation if required
                 </h3>
+
                 <p className="mt-2">
                   Android may ask you to allow your browser or file manager to
                   install applications from unknown sources.
@@ -266,6 +266,7 @@ export default function MyOwnPrayerPage() {
                 <h3 className="font-semibold text-emerald-100">
                   3. Install the application
                 </h3>
+
                 <p className="mt-2">
                   Open the downloaded APK and follow Android&apos;s installation
                   instructions.
@@ -276,6 +277,7 @@ export default function MyOwnPrayerPage() {
                 <h3 className="font-semibold text-emerald-100">
                   4. Security check
                 </h3>
+
                 <p className="mt-2">
                   Android may perform a Play Protect security check before
                   installation. Review the warning or verification information
