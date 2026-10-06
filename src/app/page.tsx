@@ -606,21 +606,30 @@ export default function Home() {
                   continues.
                 </p>
 
-                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                  <Link
-                    href="/about"
-                    className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#34d399] px-6 text-sm font-semibold text-[#051913] transition duration-300 hover:bg-[#6ee7b7]"
-                  >
-                    About the developer
-                  </Link>
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+  <Link
+    href="/about"
+    className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#34d399] px-6 text-sm font-semibold text-[#051913] transition duration-300 hover:bg-[#6ee7b7]"
+  >
+    About the developer
+  </Link>
 
-                  <Link
-                    href="/contact"
-                    className="inline-flex min-h-11 items-center justify-center rounded-full border border-emerald-400/20 px-6 text-sm font-semibold text-emerald-300 transition duration-300 hover:border-emerald-400/40 hover:bg-emerald-400/5"
-                  >
-                    Get in touch
-                  </Link>
-                </div>
+  <Link
+    href="/contact"
+    className="inline-flex min-h-11 items-center justify-center rounded-full border border-emerald-400/20 px-6 text-sm font-semibold text-emerald-300 transition duration-300 hover:border-emerald-400/40 hover:bg-emerald-400/5"
+  >
+    Get in touch
+  </Link>
+
+  <a
+    href="https://bhokto.com.bd/pay/thequransite"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex min-h-11 items-center justify-center rounded-full border border-yellow-300/20 bg-yellow-300/5 px-6 text-sm font-semibold text-yellow-300 transition duration-300 hover:border-yellow-300/35 hover:bg-yellow-300/10"
+  >
+    Support the Project
+  </a>
+</div>
               </div>
             </div>
           </div>

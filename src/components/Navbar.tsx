@@ -150,6 +150,15 @@ export default function Navbar() {
           >
             Explore Apps
           </Link>
+	<a
+  href="https://bhokto.com.bd/pay/thequransite"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={closeMenu}
+  className="mt-3 inline-flex min-h-11 items-center justify-center rounded-full border border-yellow-300/20 bg-yellow-300/5 px-5 text-sm font-semibold text-yellow-300 transition duration-200 hover:border-yellow-300/35 hover:bg-yellow-300/10"
+>
+  Support the Project →
+</a>
         </nav>
       </div>
     </header>

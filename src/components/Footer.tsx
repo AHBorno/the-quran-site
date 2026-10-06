@@ -90,6 +90,15 @@ export default function Footer() {
                 Contact
               </Link>
 
+              <a
+                href="https://bhokto.com.bd/pay/thequransite"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-yellow-300 transition hover:text-yellow-200"
+              >
+                Support the Project
+              </a>
+
               <Link
                 href="/privacy"
                 className="text-sm text-[#788b84] transition hover:text-emerald-300"
@@ -115,7 +124,9 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col gap-4 border-t border-emerald-400/10 pt-7 text-xs text-[#5f736b] sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} The Quran Site. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} The Quran Site. All rights reserved.
+          </p>
 
           <p>Independent software &amp; application developer.</p>
         </div>
