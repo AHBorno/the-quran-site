@@ -74,35 +74,74 @@ const features = [
 
 const versions = [
   {
+    version: "1.5 Beta",
+    details: [
+      "Reorganized side-menu.",
+      "Added Settings.",
+      "Added Data Saver inside Settings.",
+      "Fixed offline and online timings sync.",
+      "Added Eid prayer rules in Some Important Prayers.",
+      "Added Support My Works button for Hadiyah.",
+      "Added Landscape orientation support.",
+      "Added Live Sun Location & Solar Path.",
+      "New website.",
+    ],
+  },
+  {
     version: "1.4 Beta",
     details: [
-      "Fixed important timings.",
+      "Fixed some important timings.",
       "Added Nearby Mosque Finder.",
       "Fixed broken widget thumbnails.",
     ],
   },
   {
-    version: "1.3",
+    version: "1.3 Beta",
     details: [
-      "Improved application stability and usability.",
+      "Optimized App Update checking algorithm.",
+      "Optimized timings update algorithm.",
+      "Fixed notifications stacking.",
+      "Added Tasbeeh Counter.",
+      "Added Custom Alert Sound.",
+      "Added Important Special Prayers.",
+      "Integrated Astronomical Prayer Calculator for offline timing updates.",
+      "Fixed stoppage of notification when offline.",
+      "Fixed time zone reset when offline.",
+      "Fixed some broken texts on smaller screens.",
+      "Notification icon updated.",
+      "Implemented auto old files deletion after update to free up space.",
     ],
   },
   {
-    version: "1.2",
+    version: "1.2 Beta",
     details: [
-      "Added improvements and fixes based on testing.",
+      "Visualized Prayer end times.",
+      "Optimized Prayer times.",
+      "UI optimization.",
+      "Spelling corrections.",
+      "Added Hijri Calendar (Web Synced).",
+      "Added bug reporting.",
     ],
   },
   {
-    version: "1.1",
+    version: "1.1 Beta",
     details: [
-      "Improved the overall application experience.",
+      "Side menu added.",
+      "Available in 3 different languages.",
+      "Optimized Prayer card.",
+      "Optimized Prayer timings.",
+      "New Light Theme.",
     ],
   },
   {
-    version: "1.0",
+    version: "1.0 Beta",
     details: [
-      "Initial release of My Own Prayer.",
+      "Prayer times.",
+      "Prayer time notifications.",
+      "Nafl Prayer Times.",
+      "Forbidden Prayer Times.",
+      "Qibla Finder.",
+      "No background resource usage.",
     ],
   },
 ];
@@ -122,7 +161,7 @@ export default function MyOwnPrayerPage() {
           <div className="mt-10 grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
             <div>
               <div className="mb-5 inline-flex items-center rounded-full border border-emerald-400/15 bg-[#0a231b] px-3 py-1.5 text-xs font-medium text-emerald-300">
-                Android · v1.4 Beta
+                Android · v1.5 Beta
               </div>
 
               <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-emerald-50 sm:text-5xl lg:text-6xl">
@@ -143,7 +182,7 @@ export default function MyOwnPrayerPage() {
 
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
-                  href="https://github.com/AHBorno/My-Own-Prayer/releases/download/v1.4-beta/My.Own.Prayer.apk"
+                  href="https://github.com/AHBorno/My-Own-Prayer/releases/download/v1.5-beta/My.Own.Prayer.apk"
                   className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#34d399] px-6 text-sm font-semibold text-[#051913] transition hover:bg-[#6ee7b7]"
                 >
                   Download APK
@@ -316,28 +355,35 @@ export default function MyOwnPrayerPage() {
 
       <section className="border-y border-emerald-400/10 bg-[#071d16]">
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
-          <div className="max-w-2xl">
+          <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-300">
               Version history
             </p>
 
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-emerald-50">
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-emerald-50 sm:text-4xl">
               Development history.
             </h2>
+
+            <p className="mt-5 text-base leading-8 text-[#788b84]">
+              A record of the major features, improvements, and fixes released
+              throughout the development of My Own Prayer.
+            </p>
           </div>
 
           <div className="mt-10 space-y-4">
             {versions.map((item) => (
               <article
                 key={item.version}
-                className="rounded-2xl border border-emerald-400/10 bg-[#0a231b] p-6"
+                className="rounded-2xl border border-emerald-400/10 bg-[#0a231b] p-6 transition duration-200 hover:border-emerald-400/20"
               >
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-                  <h3 className="text-lg font-semibold text-emerald-50">
-                    v{item.version}
-                  </h3>
+                <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
+                  <div className="shrink-0">
+                    <span className="inline-flex rounded-full border border-emerald-400/15 bg-[#071d16] px-3 py-1.5 text-xs font-semibold text-emerald-300">
+                      v{item.version}
+                    </span>
+                  </div>
 
-                  <div className="space-y-2 text-sm leading-7 text-[#788b84] sm:max-w-2xl">
+                  <div className="space-y-2 text-sm leading-7 text-[#788b84]">
                     {item.details.map((detail) => (
                       <p key={detail}>• {detail}</p>
                     ))}
