@@ -125,10 +125,9 @@ export default function Footer() {
 
         <div className="mt-14 flex flex-col gap-4 border-t border-emerald-400/10 pt-7 text-xs text-[#5f736b] sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} The Quran Site. All rights reserved.
+            © {new Date().getFullYear()} The Quran Site &amp; Ashiqul Haque Borno. All rights reserved.
           </p>
 
-          <p>Independent software &amp; application developer.</p>
         </div>
       </div>
     </footer>
