@@ -415,14 +415,6 @@ export default function MyOwnPrayerPage() {
               </div>
 
               <div className="flex flex-wrap gap-3">
-                <a
-                  href="https://bhokto.com.bd"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-emerald-400/20 bg-[#071d16] px-6 text-sm font-semibold text-emerald-100 transition hover:border-emerald-400/35 hover:bg-[#0f2e23]"
-                >
-                  Support
-                </a>
 
                 <Link
                   href="/contact"
@@ -435,7 +427,7 @@ export default function MyOwnPrayerPage() {
           </div>
 
           <p className="mt-8 text-center text-xs text-[#5f736b]">
-            My Own Prayer is an independent project by Ashiqul Haque Borno.
+            My Own Prayer is an project by Ashiqul Haque Borno.
           </p>
         </div>
       </section>
