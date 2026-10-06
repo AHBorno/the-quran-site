@@ -1,0 +1,276 @@
+@import "tailwindcss";
+
+:root {
+  --background: #051913;
+  --foreground: #ecfdf5;
+
+  --surface: #0a231b;
+  --surface-light: #0f2e23;
+  --surface-raised: #0c3729;
+
+  --border: rgba(52, 211, 153, 0.14);
+  --border-strong: rgba(52, 211, 153, 0.28);
+
+  --accent: #34d399;
+  --accent-dark: #10b981;
+  --accent-deep: #067756;
+
+  --yellow: #fde047;
+
+  --muted: #788b84;
+  --muted-light: #a7b8b1;
+  --white: #ecfdf5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(52, 211, 153, 0.25);
+  color: #ecfdf5;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #04150f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #164d3a;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1d6a4e;
+}
+
+/* Arabic typography */
+
+[lang="ar"] {
+  font-family:
+    "Noto Naskh Arabic",
+    "Amiri",
+    "Traditional Arabic",
+    serif;
+  line-height: 2;
+}
+
+/* Focus */
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Utility surfaces */
+
+.glass-surface {
+  background: rgba(10, 35, 27, 0.72);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.green-glow {
+  box-shadow:
+    0 0 40px rgba(52, 211, 153, 0.08),
+    0 0 90px rgba(52, 211, 153, 0.04);
+}
+
+.yellow-glow {
+  box-shadow:
+    0 0 40px rgba(253, 224, 71, 0.08),
+    0 0 90px rgba(253, 224, 71, 0.04);
+}
+
+/* General animations */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Moon animation */
+
+@keyframes moonFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate3d(0, -7px, 0) rotate(-2deg);
+  }
+}
+
+/* Star animations */
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.85);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes twinkleSlow {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 0.9;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes twinkleDelay {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(0.75);
+  }
+
+  50% {
+    opacity: 0.85;
+    transform: scale(1.1);
+  }
+}
+
+/* Subtle starfield depth */
+
+@keyframes starDrift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(4px, -5px, 0);
+  }
+}
+
+@keyframes starDriftSlow {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(-5px, 4px, 0);
+  }
+}
+
+/* Animation classes */
+
+.animate-moon-float {
+  animation: moonFloat 6s ease-in-out infinite;
+}
+
+.animate-twinkle {
+  animation:
+    twinkle 1.8s ease-in-out infinite,
+    starDrift 7s ease-in-out infinite;
+}
+
+.animate-twinkle-slow {
+  animation:
+    twinkleSlow 2.6s ease-in-out infinite,
+    starDriftSlow 10s ease-in-out infinite;
+}
+
+.animate-twinkle-delay {
+  animation:
+    twinkleDelay 2.1s ease-in-out 0.5s infinite,
+    starDrift 8s ease-in-out 0.8s infinite;
+}
+
+/* Reduced motion accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 640px) {
+  .green-glow {
+    box-shadow:
+      0 0 30px rgba(52, 211, 153, 0.07),
+      0 0 60px rgba(52, 211, 153, 0.03);
+  }
+
+  .yellow-glow {
+    box-shadow:
+      0 0 30px rgba(253, 224, 71, 0.07),
+      0 0 60px rgba(253, 224, 71, 0.03);
+  }
+}
