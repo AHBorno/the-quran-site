@@ -185,18 +185,18 @@ export default function Home() {
         <div className="relative z-10 mx-auto w-full max-w-5xl px-6 py-24 text-center lg:px-8 lg:py-32">
           {/* Logo */}
           <div
-  className="mx-auto mb-8 flex h-24 w-24 items-center justify-center rounded-[28px] border border-emerald-300/20 bg-[#0a2b20] shadow-[0_0_60px_rgba(52,211,153,0.12)] transition duration-300 hover:border-emerald-300/35 hover:shadow-[0_0_75px_rgba(52,211,153,0.18)]"
-  style={{ animation: "float 5s ease-in-out infinite" }}
->
-  <Image
-    src="/icon.png"
-    alt="The Quran Site"
-    width={96}
-    height={96}
-    className="h-full w-full object-contain p-3"
-    priority
-  />
-</div>
+            className="mx-auto mb-8 flex h-24 w-24 items-center justify-center rounded-[28px] border border-emerald-300/20 bg-[#0a2b20] shadow-[0_0_60px_rgba(52,211,153,0.12)] transition duration-300 hover:border-emerald-300/35 hover:shadow-[0_0_75px_rgba(52,211,153,0.18)]"
+            style={{ animation: "float 5s ease-in-out infinite" }}
+          >
+            <Image
+              src="/icon.png"
+              alt="The Quran Site"
+              width={96}
+              height={96}
+              className="h-full w-full object-contain p-3"
+              priority
+            />
+          </div>
 
           <div
             className="mb-5 text-sm font-medium uppercase tracking-[0.28em] text-emerald-300"
@@ -229,36 +229,35 @@ export default function Home() {
           </p>
 
           <div
-  className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row"
-  style={{ animation: "fadeInUp 1.1s ease-out both" }}
->
-  <Link
-    href="/apps"
-    className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#34d399] px-7 text-sm font-semibold text-[#051913] shadow-[0_10px_35px_rgba(52,211,153,0.12)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#6ee7b7] hover:shadow-[0_14px_40px_rgba(52,211,153,0.18)]"
-  >
-    Explore Apps
-    <span
-      aria-hidden="true"
-      className="transition-transform duration-300 group-hover:translate-x-1"
-    >
-      →
-    </span>
-  </Link>
+            className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row"
+            style={{ animation: "fadeInUp 1.1s ease-out both" }}
+          >
+            <Link
+              href="/apps"
+              className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#34d399] px-7 text-sm font-semibold text-[#051913] shadow-[0_10px_35px_rgba(52,211,153,0.12)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#6ee7b7] hover:shadow-[0_14px_40px_rgba(52,211,153,0.18)]"
+            >
+              Explore Apps
+              <span
+                aria-hidden="true"
+                className="transition-transform duration-300 group-hover:translate-x-1"
+              >
+                →
+              </span>
+            </Link>
 
-  <Link
-    href="/software"
-    className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-emerald-400/20 bg-[#0a231b]/70 px-7 text-sm font-medium text-[#a7b8b1] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-emerald-400/35 hover:bg-[#0f2e23] hover:text-emerald-200"
-  >
-    View Software
-    <span
-      aria-hidden="true"
-      className="transition-transform duration-300 group-hover:translate-x-1"
-    >
-      →
-    </span>
-  </Link>
-</div>
-
+            <Link
+              href="/software"
+              className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-emerald-400/20 bg-[#0a231b]/70 px-7 text-sm font-medium text-[#a7b8b1] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-emerald-400/35 hover:bg-[#0f2e23] hover:text-emerald-200"
+            >
+              View Software
+              <span
+                aria-hidden="true"
+                className="transition-transform duration-300 group-hover:translate-x-1"
+              >
+                →
+              </span>
+            </Link>
+          </div>
 
           {/* Scroll hint */}
           <div className="mt-20 flex flex-col items-center gap-3 text-xs uppercase tracking-[0.2em] text-[#788b84]">
@@ -268,7 +267,7 @@ export default function Home() {
         </div>
       </section>
 
-         {/* INTRODUCTION */}
+      {/* INTRODUCTION */}
       <section className="border-b border-emerald-400/10 bg-[#061d16]">
         <div className="mx-auto max-w-6xl px-6 py-24 lg:px-8 lg:py-32">
           <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
@@ -286,19 +285,19 @@ export default function Home() {
 
             <div className="space-y-5 text-base leading-8 text-[#a7b8b1]">
               <p>
-                The Quran Site is an independent software and technology project
-                focused on creating useful digital tools for Muslims. The
-                website brings together applications and software designed to
-                support Quran learning, prayer management, and other areas of
-                everyday Islamic life.
+                The Quran Site is an independent software and technology
+                project focused on creating useful digital tools for Muslims.
+                The website brings together applications and software designed
+                to support Quran learning, prayer management, and other areas
+                of everyday Islamic life.
               </p>
 
               <p>
-                Our projects include Android applications and Windows software,
-                with each project built around a practical purpose. From prayer
-                times and Qibla tools to Quran translation and learning
-                software, the goal is to make useful technology simple and
-                accessible.
+                Our projects include Android applications and Windows
+                software, with each project built around a practical purpose.
+                From prayer times and Qibla tools to Quran translation and
+                learning software, the goal is to make useful technology
+                simple and accessible.
               </p>
 
               <p>
@@ -327,7 +326,7 @@ export default function Home() {
         </div>
       </section>
 
-            {/* WHAT WE MAKE */}
+      {/* WHAT WE MAKE */}
       <section className="border-b border-emerald-400/10">
         <div className="mx-auto max-w-6xl px-6 py-24 lg:px-8 lg:py-32">
           <div className="max-w-2xl">
@@ -340,9 +339,9 @@ export default function Home() {
             </h2>
 
             <p className="mt-5 leading-8 text-[#a7b8b1]">
-              The project explores different types of software and digital tools
-              designed to make useful Islamic resources easier to access and
-              use.
+              The project explores different types of software and digital
+              tools designed to make useful Islamic resources easier to access
+              and use.
             </p>
           </div>
 
@@ -461,7 +460,7 @@ export default function Home() {
         </div>
       </section>
 
-            {/* PRODUCTS */}
+      {/* PRODUCTS */}
       <section className="border-b border-emerald-400/10 bg-[#061d16]">
         <div className="mx-auto max-w-6xl px-6 py-24 lg:px-8 lg:py-32">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
@@ -475,8 +474,8 @@ export default function Home() {
               </h2>
 
               <p className="mt-5 leading-8 text-[#a7b8b1]">
-                Explore the applications and software currently being developed
-                as part of The Quran Site.
+                Explore the applications and software currently being
+                developed as part of The Quran Site.
               </p>
             </div>
 
@@ -557,7 +556,7 @@ export default function Home() {
         </div>
       </section>
 
-            {/* DEVELOPER */}
+      {/* DEVELOPER */}
       <section className="border-b border-emerald-400/10">
         <div className="mx-auto max-w-6xl px-6 py-24 lg:px-8 lg:py-32">
           <div className="mx-auto max-w-4xl">
@@ -628,7 +627,7 @@ export default function Home() {
         </div>
       </section>
 
-            {/* ARTICLES */}
+      {/* ARTICLES */}
       <section className="border-b border-emerald-400/10 bg-[#061d16]">
         <div className="mx-auto max-w-6xl px-6 py-24 lg:px-8 lg:py-32">
           <div className="grid gap-12 lg:grid-cols-[1fr_0.8fr] lg:items-center">
@@ -701,7 +700,7 @@ export default function Home() {
         </div>
       </section>
 
-            {/* FINAL CTA */}
+      {/* FINAL CTA */}
       <section className="relative overflow-hidden">
         <div
           className="pointer-events-none absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-emerald-400/5 blur-[110px]"
@@ -725,7 +724,7 @@ export default function Home() {
             learn more about the project.
           </p>
 
-          <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row sm:flex-wrap">
             <Link
               href="/apps"
               className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#34d399] px-7 text-sm font-semibold text-[#051913] shadow-[0_10px_35px_rgba(52,211,153,0.1)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#6ee7b7] hover:shadow-[0_14px_40px_rgba(52,211,153,0.16)]"
@@ -751,7 +750,27 @@ export default function Home() {
                 →
               </span>
             </Link>
+
+            <a
+              href="https://bhokto.com.bd/pay/thequransite"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-yellow-300/20 bg-yellow-300/5 px-7 text-sm font-medium text-yellow-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-yellow-300/35 hover:bg-yellow-300/10"
+            >
+              Support the Project
+              <span
+                aria-hidden="true"
+                className="transition-transform duration-300 group-hover:translate-x-1"
+              >
+                →
+              </span>
+            </a>
           </div>
+
+          <p className="mx-auto mt-5 max-w-xl text-xs leading-6 text-[#667a72]">
+            If you find the software useful, you can support the continued
+            development of The Quran Site.
+          </p>
         </div>
       </section>
     </main>
