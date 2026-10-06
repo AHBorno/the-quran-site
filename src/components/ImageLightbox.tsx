@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { createPortal } from "react-dom";
 import { useEffect, useState } from "react";
 
 type ImageLightboxProps = {
@@ -13,6 +14,11 @@ export default function ImageLightbox({
   alt,
 }: ImageLightboxProps) {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (!open) {
@@ -36,6 +42,39 @@ export default function ImageLightbox({
     };
   }, [open]);
 
+  const lightbox = (
+    <div
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 p-4 backdrop-blur-md sm:p-8"
+      onClick={() => setOpen(false)}
+      role="dialog"
+      aria-modal="true"
+      aria-label={alt}
+    >
+      <button
+        type="button"
+        onClick={() => setOpen(false)}
+        className="absolute right-5 top-5 z-[10000] flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-2xl leading-none text-white backdrop-blur-md transition hover:bg-white/20"
+        aria-label="Close image preview"
+      >
+        ×
+      </button>
+
+      <div
+        className="relative flex max-h-[92vh] max-w-[92vw] items-center justify-center"
+        onClick={(event) => event.stopPropagation()}
+      >
+        <Image
+          src={src}
+          alt={alt}
+          width={1400}
+          height={1800}
+          className="max-h-[92vh] w-auto max-w-[92vw] rounded-2xl object-contain shadow-2xl"
+          priority
+        />
+      </div>
+    </div>
+  );
+
   return (
     <>
       <button
@@ -57,38 +96,7 @@ export default function ImageLightbox({
         </span>
       </button>
 
-      {open && (
-        <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 backdrop-blur-md sm:p-8"
-          onClick={() => setOpen(false)}
-          role="dialog"
-          aria-modal="true"
-          aria-label={alt}
-        >
-          <button
-            type="button"
-            onClick={() => setOpen(false)}
-            className="absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/10 text-2xl text-white transition hover:bg-white/20"
-            aria-label="Close image preview"
-          >
-            ×
-          </button>
-
-          <div
-            className="relative flex max-h-[92vh] max-w-[92vw] items-center justify-center"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <Image
-              src={src}
-              alt={alt}
-              width={1400}
-              height={1800}
-              className="max-h-[92vh] w-auto max-w-[92vw] rounded-2xl object-contain shadow-2xl"
-              priority
-            />
-          </div>
-        </div>
-      )}
+      {mounted && open && createPortal(lightbox, document.body)}
     </>
   );
 }
