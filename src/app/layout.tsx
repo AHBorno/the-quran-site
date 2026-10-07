@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: {
@@ -81,6 +82,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+<head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7106930632163825"
+     crossorigin="anonymous"></script>
+</head>
       <body>
         <Navbar />
         {children}
