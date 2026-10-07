@@ -32,7 +32,7 @@ const apps = [
   {
     name: "My Own Prayer",
     platform: "Android",
-    version: "v1.4 Beta",
+    version: "v1.5 Beta",
     category: "Prayer & Daily Practice",
     description:
       "A prayer reminder and Qibla finder designed to help manage prayer times and everyday Islamic practices.",
