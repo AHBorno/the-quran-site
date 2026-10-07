@@ -194,8 +194,18 @@ export default function ContactPage() {
       {/* PROJECT LINKS */}
       <section className="border-t border-emerald-400/10">
         <div className="mx-auto max-w-4xl px-6 py-24 text-center lg:py-32">
-          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-emerald-400/20 bg-[#067756] text-xl font-bold text-emerald-50 shadow-[0_0_30px_rgba(52,211,153,0.08)]">
-            QS
+          <div
+            className="mx-auto mb-8 flex h-24 w-24 items-center justify-center rounded-[28px] border border-emerald-300/20 bg-[#0a2b20] shadow-[0_0_60px_rgba(52,211,153,0.12)] transition duration-300 hover:border-emerald-300/35 hover:shadow-[0_0_75px_rgba(52,211,153,0.18)]"
+            style={{ animation: "float 5s ease-in-out infinite" }}
+          >
+            <Image
+              src="/icon.png"
+              alt="The Quran Site"
+              width={96}
+              height={96}
+              className="h-full w-full object-contain p-3"
+              priority
+            />
           </div>
 
           <h2 className="mt-7 text-3xl font-semibold tracking-tight text-emerald-50 sm:text-4xl">
