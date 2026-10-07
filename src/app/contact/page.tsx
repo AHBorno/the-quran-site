@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -190,21 +191,16 @@ export default function ContactPage() {
         </div>
       </section>
 
-
       {/* PROJECT LINKS */}
       <section className="border-t border-emerald-400/10">
         <div className="mx-auto max-w-4xl px-6 py-24 text-center lg:py-32">
-          <div
-            className="mx-auto mb-8 flex h-24 w-24 items-center justify-center rounded-[28px] border border-emerald-300/20 bg-[#0a2b20] shadow-[0_0_60px_rgba(52,211,153,0.12)] transition duration-300 hover:border-emerald-300/35 hover:shadow-[0_0_75px_rgba(52,211,153,0.18)]"
-            style={{ animation: "float 5s ease-in-out infinite" }}
-          >
+          <div className="mx-auto flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl border border-emerald-400/20 bg-[#0a231b] shadow-[0_0_30px_rgba(52,211,153,0.08)]">
             <Image
               src="/icon.png"
-              alt="The Quran Site"
-              width={96}
-              height={96}
-              className="h-full w-full object-contain p-3"
-              priority
+              alt="The Quran Site logo"
+              width={64}
+              height={64}
+              className="h-full w-full object-contain p-1"
             />
           </div>
 
