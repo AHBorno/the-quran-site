@@ -223,7 +223,7 @@ export default function Home() {
             className="mx-auto mt-7 max-w-2xl text-base leading-8 text-[#a7b8b1] sm:text-lg"
             style={{ animation: "fadeInUp 1s ease-out both" }}
           >
-            An independent software and technology project creating simple,
+            An software and technology project creating simple,
             useful digital tools for Quran learning, prayer management, and
             other aspects of everyday Islamic life.
           </p>
@@ -285,7 +285,7 @@ export default function Home() {
 
             <div className="space-y-5 text-base leading-8 text-[#a7b8b1]">
               <p>
-                The Quran Site is an independent software and technology
+                The Quran Site is an software and technology
                 project focused on creating useful digital tools for Muslims.
                 The website brings together applications and software designed
                 to support Quran learning, prayer management, and other areas
@@ -589,11 +589,11 @@ export default function Home() {
                 </div>
 
                 <div className="mt-2 text-sm font-medium text-emerald-300">
-                  Independent Software Developer
+                  Software Developer
                 </div>
 
                 <p className="mt-6 leading-8 text-[#a7b8b1]">
-                  The Quran Site is an independent software project created and
+                  The Quran Site is an software project created and
                   maintained by Ashiqul Haque Borno. The project combines
                   software development, experimentation, and learning with a
                   focus on creating useful digital tools for Quran learning,
