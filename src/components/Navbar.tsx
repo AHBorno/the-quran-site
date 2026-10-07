@@ -29,7 +29,7 @@ export default function Navbar() {
           aria-label="The Quran Site home"
           onClick={closeMenu}
         >
-          <div className="relative flex h-[36px] w-[36px] items-center justify-center overflow-hidden rounded-[11px] border border-emerald-300/15 bg-[#0a231b] shadow-[0_0_25px_rgba(52,211,153,0.12)] transition duration-300 group-hover:border-emerald-300/30 group-hover:shadow-[0_0_30px_rgba(52,211,153,0.2)] sm:h-10 sm:w-10 sm:rounded-xl">
+          <div className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl border border-emerald-300/15 bg-[#0a231b] shadow-[0_0_25px_rgba(52,211,153,0.12)] transition duration-300 group-hover:border-emerald-300/30 group-hover:shadow-[0_0_30px_rgba(52,211,153,0.2)]">
             <Image
               src="/icon.png"
               alt="The Quran Site"
@@ -78,9 +78,7 @@ export default function Navbar() {
         {/* Mobile menu button */}
         <button
           type="button"
-          aria-label={
-            menuOpen ? "Close navigation menu" : "Open navigation menu"
-          }
+          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={menuOpen}
           aria-controls="mobile-navigation"
           onClick={() => setMenuOpen((open) => !open)}
@@ -152,16 +150,15 @@ export default function Navbar() {
           >
             Explore Apps
           </Link>
-
-          <a
-            href="https://bhokto.com.bd/pay/thequransite"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={closeMenu}
-            className="mt-3 inline-flex min-h-11 items-center justify-center rounded-full border border-yellow-300/20 bg-yellow-300/5 px-5 text-sm font-semibold text-yellow-300 transition duration-200 hover:border-yellow-300/35 hover:bg-yellow-300/10"
-          >
-            Support the Project →
-          </a>
+	<a
+  href="https://bhokto.com.bd/pay/thequransite"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={closeMenu}
+  className="mt-3 inline-flex min-h-11 items-center justify-center rounded-full border border-yellow-300/20 bg-yellow-300/5 px-5 text-sm font-semibold text-yellow-300 transition duration-200 hover:border-yellow-300/35 hover:bg-yellow-300/10"
+>
+  Support the Project →
+</a>
         </nav>
       </div>
     </header>

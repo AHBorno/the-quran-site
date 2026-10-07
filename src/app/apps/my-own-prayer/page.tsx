@@ -205,7 +205,7 @@ export default function MyOwnPrayerPage() {
             </div>
 
             <div className="flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-sm overflow-hidden rounded-[2rem] border border-emerald-400/15 bg-[#0a231b] p-3 shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
+              <div className="relative w-full max-w-[280px] sm:max-w-sm overflow-hidden rounded-[2rem] border border-emerald-400/15 bg-[#0a231b] p-3 shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
                 <Image
                   src="/images/my-own-prayer/Logo.png"
                   alt="My Own Prayer application logo"
@@ -415,7 +415,6 @@ export default function MyOwnPrayerPage() {
               </div>
 
               <div className="flex flex-wrap gap-3">
-
                 <Link
                   href="/contact"
                   className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#34d399] px-6 text-sm font-semibold text-[#051913] transition hover:bg-[#6ee7b7]"
