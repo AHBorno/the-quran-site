@@ -244,11 +244,11 @@ export default function MyOwnPrayerPage() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 -mx-6 flex gap-5 overflow-x-auto px-6 pb-4 snap-x snap-mandatory sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:pb-0 sm:snap-none lg:grid-cols-3">
             {features.map((feature) => (
               <article
                 key={feature.title}
-                className="group overflow-hidden rounded-2xl border border-emerald-400/10 bg-[#0a231b] transition duration-300 hover:-translate-y-1 hover:border-emerald-400/25 hover:shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
+                className="group min-w-[82vw] snap-start overflow-hidden rounded-2xl border border-emerald-400/10 bg-[#0a231b] transition duration-300 hover:-translate-y-1 hover:border-emerald-400/25 hover:shadow-[0_20px_50px_rgba(0,0,0,0.25)] sm:min-w-0"
               >
                 <div className="flex min-h-[420px] items-center justify-center bg-[#071d16] p-5">
                   <ImageLightbox
