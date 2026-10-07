@@ -190,44 +190,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* GOOD BUG REPORT */}
-      <section className="border-t border-emerald-400/10 bg-[#061d16]">
-        <div className="mx-auto max-w-5xl px-6 py-20 lg:px-8 lg:py-24">
-          <div className="rounded-3xl border border-emerald-400/10 bg-[#0a231b] p-8 sm:p-10">
-            <div className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-400">
-              Reporting an issue
-            </div>
-
-            <h2 className="mt-4 text-2xl font-semibold text-emerald-50 sm:text-3xl">
-              Help make the software better.
-            </h2>
-
-            <p className="mt-5 max-w-2xl leading-8 text-[#899b94]">
-              When reporting a problem, it helps to mention the application
-              name, version, operating system or device, what you were trying
-              to do, and what happened instead. Screenshots can also be useful
-              when relevant.
-            </p>
-
-            <div className="mt-8 grid gap-3 sm:grid-cols-2">
-              {[
-                "Application or software name",
-                "Version number",
-                "Device or operating system",
-                "Steps that caused the problem",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="flex items-center gap-3 rounded-xl border border-emerald-400/10 bg-[#061d16] px-4 py-3 text-sm text-[#899b94]"
-                >
-                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400" />
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* PROJECT LINKS */}
       <section className="border-t border-emerald-400/10">
