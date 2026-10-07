@@ -6,7 +6,7 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: {
-    default: "The Quran Site | Free Islamic Softwares and Tech",
+    default: "The Quran Site | Free Islamic Software and Tech",
     template: "%s | The Quran Site",
   },
 
@@ -40,9 +40,24 @@ export const metadata: Metadata = {
   category: "technology",
 
   icons: {
-    icon: "/icon.png",
-    shortcut: "/icon.png",
-    apple: "/icon.png",
+    icon: [
+      {
+        url: "/icon.png",
+        type: "image/png",
+      },
+    ],
+    shortcut: [
+      {
+        url: "/icon.png",
+        type: "image/png",
+      },
+    ],
+    apple: [
+      {
+        url: "/icon.png",
+        type: "image/png",
+      },
+    ],
   },
 
   robots: {
@@ -61,7 +76,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "The Quran Site",
-    title: "The Quran Site | Free Islamic Softwares and Tech",
+    title: "The Quran Site | Free Islamic Software and Tech",
     description:
       "Independent Islamic software, applications, and digital tools for Quran learning, prayer, and everyday Islamic activities.",
     locale: "en_US",
@@ -69,7 +84,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "The Quran Site | Free Islamic Softwares and Tech",
+    title: "The Quran Site | Free Islamic Software and Tech",
     description:
       "Independent Islamic software, applications, and digital tools for Quran learning, prayer, and everyday Islamic activities.",
   },
@@ -82,13 +97,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-<head>
-  <Script
-    async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7106930632163825"
-    crossOrigin="anonymous"
-  />
-</head>
+      <head>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7106930632163825"
+          crossOrigin="anonymous"
+        />
+      </head>
+
       <body>
         <Navbar />
         {children}
