@@ -83,8 +83,11 @@ export default function RootLayout({
   return (
     <html lang="en">
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7106930632163825"
-     crossorigin="anonymous"></script>
+  <Script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7106930632163825"
+    crossOrigin="anonymous"
+  />
 </head>
       <body>
         <Navbar />
