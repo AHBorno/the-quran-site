@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     "forbidden prayer times",
     "Hijri calendar",
     "nearby mosque finder",
+    "Tasbeeh Counter",
     "Islamic Android app",
   ],
   openGraph: {
@@ -61,8 +62,14 @@ const features = [
   {
     title: "Nearby Mosque Finder",
     description:
-      "Find nearby mosques using location-based information.",
-    image: "/images/my-own-prayer/qibla.png",
+      "Find nearby mosques and access offline map information for easier mosque discovery.",
+    image: "/images/my-own-prayer/mosque-finder.png",
+  },
+  {
+    title: "Tasbeeh Counter",
+    description:
+      "Use a simple digital counter for Dhikr and Tasbeeh during your daily worship.",
+    image: "/images/my-own-prayer/tasbeeh-counter.png",
   },
   {
     title: "Three Languages",
@@ -205,7 +212,7 @@ export default function MyOwnPrayerPage() {
             </div>
 
             <div className="flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-[280px] sm:max-w-sm overflow-hidden rounded-[2rem] border border-emerald-400/15 bg-[#0a231b] p-3 shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
+              <div className="relative w-full max-w-[280px] overflow-hidden rounded-[2rem] border border-emerald-400/15 bg-[#0a231b] p-3 shadow-[0_30px_80px_rgba(0,0,0,0.35)] sm:max-w-sm">
                 <Image
                   src="/images/my-own-prayer/Logo.png"
                   alt="My Own Prayer application logo"
