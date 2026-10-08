@@ -196,9 +196,7 @@ export default function MyOwnPrayerPage() {
                 </a>
 
                 <a
-                  href="https://github.com/AHBorno/My-Own-Prayer/releases"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#version-history"
                   className="inline-flex min-h-11 items-center justify-center rounded-full border border-emerald-400/20 bg-[#0a231b] px-6 text-sm font-semibold text-emerald-100 transition hover:border-emerald-400/35 hover:bg-[#0f2e23]"
                 >
                   View Releases
@@ -360,7 +358,10 @@ export default function MyOwnPrayerPage() {
         </div>
       </section>
 
-      <section className="border-y border-emerald-400/10 bg-[#071d16]">
+      <section
+        id="version-history"
+        className="scroll-mt-24 border-y border-emerald-400/10 bg-[#071d16]"
+      >
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-300">
