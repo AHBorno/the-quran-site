@@ -187,21 +187,30 @@ export default function MyOwnPrayerPage() {
                 for English, Bengali, and Arabic.
               </p>
 
-              <div className="mt-8 flex flex-wrap gap-3">
-                <a
-                  href="https://github.com/AHBorno/My-Own-Prayer/releases/download/v1.5-beta/My.Own.Prayer.apk"
-                  className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#34d399] px-6 text-sm font-semibold text-[#051913] transition hover:bg-[#6ee7b7]"
-                >
-                  Download APK
-                </a>
+             <div className="mt-8 flex flex-wrap gap-3">
+  <a
+    href="https://github.com/AHBorno/My-Own-Prayer/releases/download/v1.5-beta/My.Own.Prayer.apk"
+    className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#34d399] px-6 text-sm font-semibold text-[#051913] transition hover:bg-[#6ee7b7]"
+  >
+    Download APK
+  </a>
 
-                <a
-                  href="#version-history"
-                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-emerald-400/20 bg-[#0a231b] px-6 text-sm font-semibold text-emerald-100 transition hover:border-emerald-400/35 hover:bg-[#0f2e23]"
-                >
-                  View Releases
-                </a>
-              </div>
+  <a
+    href="https://apkpure.com/p/com.theQuranSite.pray"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex min-h-11 items-center justify-center rounded-full border border-yellow-300/25 bg-yellow-300/10 px-6 text-sm font-semibold text-yellow-200 transition hover:border-yellow-300/40 hover:bg-yellow-300/15"
+  >
+    Download from APKPure
+  </a>
+
+  <a
+    href="#version-history"
+    className="inline-flex min-h-11 items-center justify-center rounded-full border border-emerald-400/20 bg-[#0a231b] px-6 text-sm font-semibold text-emerald-100 transition hover:border-emerald-400/35 hover:bg-[#0f2e23]"
+  >
+    View Releases
+  </a>
+</div>
 
               <p className="mt-5 max-w-xl text-xs leading-6 text-[#5f736b]">
                 My Own Prayer is currently in beta testing. Bugs or glitches
