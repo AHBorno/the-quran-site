@@ -36,46 +36,59 @@ export const metadata: Metadata = {
 
 const features = [
   {
+    title: "Watch My Own Prayer",
+    description:
+      "Watch the app in action and explore its features in this short video.",
+    type: "video",
+  },
+  {
     title: "Prayer Times",
     description:
       "View daily prayer times in a simple interface designed for everyday use.",
     image: "/images/my-own-prayer/prayer-times.png",
+    type: "image",
   },
   {
     title: "Qibla Finder",
     description:
       "Find the direction of the Qibla using your Android device.",
     image: "/images/my-own-prayer/qibla.png",
+    type: "image",
   },
   {
     title: "Nafl & Forbidden Times",
     description:
       "Check Nafl prayer information and times when prayer is traditionally restricted.",
     image: "/images/my-own-prayer/nafl-prayers.png",
+    type: "image",
   },
   {
     title: "Hijri Calendar",
     description:
       "Keep track of the Islamic Hijri date alongside your daily activities.",
     image: "/images/my-own-prayer/hijri-calendar.png",
+    type: "image",
   },
   {
     title: "Nearby Mosque Finder",
     description:
       "Find nearby mosques and access offline map information for easier mosque discovery.",
     image: "/images/my-own-prayer/mosque-finder.png",
+    type: "image",
   },
   {
     title: "Tasbeeh Counter",
     description:
       "Use a simple digital counter for Dhikr and Tasbeeh during your daily worship.",
     image: "/images/my-own-prayer/tasbeeh-counter.png",
+    type: "image",
   },
   {
     title: "Three Languages",
     description:
       "Use the application in English, Bengali, or Arabic.",
     image: "/images/my-own-prayer/3-languages.png",
+    type: "image",
   },
 ];
 
@@ -156,7 +169,6 @@ const versions = [
 export default function MyOwnPrayerPage() {
   return (
     <main>
-      {/* App introduction */}
       <section className="border-b border-emerald-400/10">
         <div className="mx-auto max-w-6xl px-6 pb-20 pt-16 lg:px-8 lg:pb-24 lg:pt-20">
           <Link
@@ -235,7 +247,6 @@ export default function MyOwnPrayerPage() {
         </div>
       </section>
 
-      {/* Horizontally scrollable screenshots on mobile and PC */}
       <section>
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
           <div className="max-w-2xl">
@@ -248,25 +259,37 @@ export default function MyOwnPrayerPage() {
             </h2>
 
             <p className="mt-5 text-base leading-8 text-[#788b84]">
-              Explore the features of My Own Prayer through the screenshots
-              below. Scroll horizontally to see more.
+              Explore the application video and screenshots below. Scroll
+              horizontally to discover all the features.
             </p>
           </div>
 
-          <div className="mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto overscroll-x-contain pb-6 [scrollbar-color:#176b50_#071d16] [scrollbar-width:thin]">
+          <div className="-mx-6 mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto overscroll-x-contain px-6 pb-6 [scrollbar-color:rgba(52,211,153,0.4)_transparent] [scrollbar-width:thin] sm:mx-0 sm:px-0">
             {features.map((feature) => (
               <article
                 key={feature.title}
-                className="w-[280px] flex-none snap-start overflow-hidden rounded-2xl border border-emerald-400/10 bg-[#0a231b] transition duration-300 hover:border-emerald-400/25 sm:w-[320px] lg:w-[340px]"
+                className="w-[82vw] min-w-[82vw] max-w-[360px] shrink-0 snap-start overflow-hidden rounded-2xl border border-emerald-400/10 bg-[#0a231b] transition duration-300 hover:border-emerald-400/25 hover:shadow-[0_20px_50px_rgba(0,0,0,0.25)] sm:w-[340px] sm:min-w-[340px] lg:w-[360px] lg:min-w-[360px]"
               >
                 <div className="flex h-[440px] items-center justify-center overflow-hidden bg-[#071d16] p-4 sm:h-[480px]">
-                  <ImageLightbox
-                    src={feature.image}
-                    alt={`${feature.title} in My Own Prayer`}
-                  />
+                  {feature.type === "video" ? (
+                    <iframe
+                      src="https://www.youtube-nocookie.com/embed/kn-RBwtFYTo"
+                      title="My Own Prayer app promotional video"
+                      className="h-full w-full rounded-xl border border-emerald-400/10"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    />
+                  ) : feature.image ? (
+                    <ImageLightbox
+                      src={feature.image}
+                      alt={`${feature.title} in My Own Prayer`}
+                    />
+                  ) : null}
                 </div>
 
-                <div className="min-h-[130px] border-t border-emerald-400/10 px-5 py-5">
+                <div className="min-h-[125px] border-t border-emerald-400/10 px-5 py-5">
                   <h3 className="text-base font-semibold text-emerald-50">
                     {feature.title}
                   </h3>
@@ -279,52 +302,14 @@ export default function MyOwnPrayerPage() {
             ))}
           </div>
 
-          <p className="mt-1 text-xs text-[#5f736b]">
-            Tip: Use Shift + mouse wheel, your trackpad, or the scrollbar to
-            browse screenshots on a computer.
+          <p className="mt-2 text-xs text-[#5f736b]">
+            Tip: Use Shift + mouse wheel or your trackpad to scroll
+            horizontally on a computer.
           </p>
         </div>
       </section>
 
-      {/* YouTube Shorts video */}
       <section className="border-y border-emerald-400/10 bg-[#071d16]">
-        <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-300">
-              Watch the app in action
-            </p>
-
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-emerald-50 sm:text-4xl">
-              Get to know My Own Prayer.
-            </h2>
-
-            <p className="mt-5 text-base leading-8 text-[#788b84]">
-              Watch this short video to see more of the app.
-            </p>
-          </div>
-
-          <div className="mx-auto mt-10 w-full max-w-[360px] overflow-hidden rounded-3xl border border-emerald-400/15 bg-[#0a231b] p-2 shadow-[0_25px_70px_rgba(0,0,0,0.3)]">
-            <div className="relative aspect-[9/16] overflow-hidden rounded-2xl bg-black">
-              <iframe
-                src="https://www.youtube-nocookie.com/embed/kn-RBwtFYTo"
-                title="My Own Prayer app video"
-                className="absolute inset-0 h-full w-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              />
-            </div>
-          </div>
-
-          <p className="mt-5 text-center text-xs text-[#5f736b]">
-            Video hosted on YouTube. Playback may depend on your browser and
-            YouTube availability.
-          </p>
-        </div>
-      </section>
-
-      {/* Installation instructions */}
-      <section>
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
             <div>
@@ -383,7 +368,6 @@ export default function MyOwnPrayerPage() {
         </div>
       </section>
 
-      {/* Compatibility */}
       <section>
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
@@ -409,7 +393,6 @@ export default function MyOwnPrayerPage() {
         </div>
       </section>
 
-      {/* Development history */}
       <section
         id="version-history"
         className="scroll-mt-24 border-y border-emerald-400/10 bg-[#071d16]"
@@ -455,7 +438,6 @@ export default function MyOwnPrayerPage() {
         </div>
       </section>
 
-      {/* Contact and support */}
       <section>
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
           <div className="rounded-3xl border border-emerald-400/15 bg-[#0a231b] p-8 sm:p-10 lg:p-12">
@@ -471,7 +453,7 @@ export default function MyOwnPrayerPage() {
 
                 <p className="mt-4 max-w-2xl text-sm leading-7 text-[#788b84]">
                   For support, bug reports, suggestions, or feedback, visit
-                  the contact page or contact the developer directly.
+                  the support page or contact the developer directly.
                 </p>
               </div>
 
