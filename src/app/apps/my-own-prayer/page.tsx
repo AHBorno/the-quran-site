@@ -156,6 +156,7 @@ const versions = [
 export default function MyOwnPrayerPage() {
   return (
     <main>
+      {/* App introduction */}
       <section className="border-b border-emerald-400/10">
         <div className="mx-auto max-w-6xl px-6 pb-20 pt-16 lg:px-8 lg:pb-24 lg:pt-20">
           <Link
@@ -187,30 +188,30 @@ export default function MyOwnPrayerPage() {
                 for English, Bengali, and Arabic.
               </p>
 
-             <div className="mt-8 flex flex-wrap gap-3">
-  <a
-    href="https://github.com/AHBorno/My-Own-Prayer/releases/download/v1.5-beta/My.Own.Prayer.apk"
-    className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#34d399] px-6 text-sm font-semibold text-[#051913] transition hover:bg-[#6ee7b7]"
-  >
-    Download APK
-  </a>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a
+                  href="https://github.com/AHBorno/My-Own-Prayer/releases/download/v1.5-beta/My.Own.Prayer.apk"
+                  className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#34d399] px-6 text-sm font-semibold text-[#051913] transition hover:bg-[#6ee7b7]"
+                >
+                  Download APK
+                </a>
 
-  <a
-    href="https://apkpure.com/p/com.theQuranSite.pray"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex min-h-11 items-center justify-center rounded-full border border-yellow-300/25 bg-yellow-300/10 px-6 text-sm font-semibold text-yellow-200 transition hover:border-yellow-300/40 hover:bg-yellow-300/15"
-  >
-    Download from APKPure
-  </a>
+                <a
+                  href="https://apkpure.com/p/com.theQuranSite.pray"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-yellow-300/25 bg-yellow-300/10 px-6 text-sm font-semibold text-yellow-200 transition hover:border-yellow-300/40 hover:bg-yellow-300/15"
+                >
+                  Download from APKPure
+                </a>
 
-  <a
-    href="#version-history"
-    className="inline-flex min-h-11 items-center justify-center rounded-full border border-emerald-400/20 bg-[#0a231b] px-6 text-sm font-semibold text-emerald-100 transition hover:border-emerald-400/35 hover:bg-[#0f2e23]"
-  >
-    View Releases
-  </a>
-</div>
+                <a
+                  href="#version-history"
+                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-emerald-400/20 bg-[#0a231b] px-6 text-sm font-semibold text-emerald-100 transition hover:border-emerald-400/35 hover:bg-[#0f2e23]"
+                >
+                  View Releases
+                </a>
+              </div>
 
               <p className="mt-5 max-w-xl text-xs leading-6 text-[#5f736b]">
                 My Own Prayer is currently in beta testing. Bugs or glitches
@@ -234,6 +235,7 @@ export default function MyOwnPrayerPage() {
         </div>
       </section>
 
+      {/* Horizontally scrollable screenshots on mobile and PC */}
       <section>
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
           <div className="max-w-2xl">
@@ -246,25 +248,25 @@ export default function MyOwnPrayerPage() {
             </h2>
 
             <p className="mt-5 text-base leading-8 text-[#788b84]">
-              My Own Prayer brings several useful prayer-related tools
-              together in one straightforward Android application.
+              Explore the features of My Own Prayer through the screenshots
+              below. Scroll horizontally to see more.
             </p>
           </div>
 
-          <div className="mt-12 -mx-6 flex gap-5 overflow-x-auto px-6 pb-4 snap-x snap-mandatory sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:pb-0 sm:snap-none lg:grid-cols-3">
+          <div className="mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto overscroll-x-contain pb-6 [scrollbar-color:#176b50_#071d16] [scrollbar-width:thin]">
             {features.map((feature) => (
               <article
                 key={feature.title}
-                className="group min-w-[82vw] snap-start overflow-hidden rounded-2xl border border-emerald-400/10 bg-[#0a231b] transition duration-300 hover:-translate-y-1 hover:border-emerald-400/25 hover:shadow-[0_20px_50px_rgba(0,0,0,0.25)] sm:min-w-0"
+                className="w-[280px] flex-none snap-start overflow-hidden rounded-2xl border border-emerald-400/10 bg-[#0a231b] transition duration-300 hover:border-emerald-400/25 sm:w-[320px] lg:w-[340px]"
               >
-                <div className="flex min-h-[420px] items-center justify-center bg-[#071d16] p-5">
+                <div className="flex h-[440px] items-center justify-center overflow-hidden bg-[#071d16] p-4 sm:h-[480px]">
                   <ImageLightbox
                     src={feature.image}
                     alt={`${feature.title} in My Own Prayer`}
                   />
                 </div>
 
-                <div className="border-t border-emerald-400/10 px-5 py-5">
+                <div className="min-h-[130px] border-t border-emerald-400/10 px-5 py-5">
                   <h3 className="text-base font-semibold text-emerald-50">
                     {feature.title}
                   </h3>
@@ -276,10 +278,53 @@ export default function MyOwnPrayerPage() {
               </article>
             ))}
           </div>
+
+          <p className="mt-1 text-xs text-[#5f736b]">
+            Tip: Use Shift + mouse wheel, your trackpad, or the scrollbar to
+            browse screenshots on a computer.
+          </p>
         </div>
       </section>
 
+      {/* YouTube Shorts video */}
       <section className="border-y border-emerald-400/10 bg-[#071d16]">
+        <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-300">
+              Watch the app in action
+            </p>
+
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-emerald-50 sm:text-4xl">
+              Get to know My Own Prayer.
+            </h2>
+
+            <p className="mt-5 text-base leading-8 text-[#788b84]">
+              Watch this short video to see more of the app.
+            </p>
+          </div>
+
+          <div className="mx-auto mt-10 w-full max-w-[360px] overflow-hidden rounded-3xl border border-emerald-400/15 bg-[#0a231b] p-2 shadow-[0_25px_70px_rgba(0,0,0,0.3)]">
+            <div className="relative aspect-[9/16] overflow-hidden rounded-2xl bg-black">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/kn-RBwtFYTo"
+                title="My Own Prayer app video"
+                className="absolute inset-0 h-full w-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+          </div>
+
+          <p className="mt-5 text-center text-xs text-[#5f736b]">
+            Video hosted on YouTube. Playback may depend on your browser and
+            YouTube availability.
+          </p>
+        </div>
+      </section>
+
+      {/* Installation instructions */}
+      <section>
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
             <div>
@@ -297,7 +342,6 @@ export default function MyOwnPrayerPage() {
                 <h3 className="font-semibold text-emerald-100">
                   1. Download the APK
                 </h3>
-
                 <p className="mt-2">
                   Download the latest beta APK using the official GitHub
                   release link on this page.
@@ -308,7 +352,6 @@ export default function MyOwnPrayerPage() {
                 <h3 className="font-semibold text-emerald-100">
                   2. Allow installation if required
                 </h3>
-
                 <p className="mt-2">
                   Android may ask you to allow your browser or file manager to
                   install applications from unknown sources.
@@ -319,7 +362,6 @@ export default function MyOwnPrayerPage() {
                 <h3 className="font-semibold text-emerald-100">
                   3. Install the application
                 </h3>
-
                 <p className="mt-2">
                   Open the downloaded APK and follow Android&apos;s installation
                   instructions.
@@ -330,7 +372,6 @@ export default function MyOwnPrayerPage() {
                 <h3 className="font-semibold text-emerald-100">
                   4. Security check
                 </h3>
-
                 <p className="mt-2">
                   Android may perform a Play Protect security check before
                   installation. Review the warning or verification information
@@ -342,6 +383,7 @@ export default function MyOwnPrayerPage() {
         </div>
       </section>
 
+      {/* Compatibility */}
       <section>
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
@@ -367,6 +409,7 @@ export default function MyOwnPrayerPage() {
         </div>
       </section>
 
+      {/* Development history */}
       <section
         id="version-history"
         className="scroll-mt-24 border-y border-emerald-400/10 bg-[#071d16]"
@@ -412,6 +455,7 @@ export default function MyOwnPrayerPage() {
         </div>
       </section>
 
+      {/* Contact and support */}
       <section>
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
           <div className="rounded-3xl border border-emerald-400/15 bg-[#0a231b] p-8 sm:p-10 lg:p-12">
@@ -427,7 +471,7 @@ export default function MyOwnPrayerPage() {
 
                 <p className="mt-4 max-w-2xl text-sm leading-7 text-[#788b84]">
                   For support, bug reports, suggestions, or feedback, visit
-                  the support page or contact the developer directly.
+                  the contact page or contact the developer directly.
                 </p>
               </div>
 
@@ -443,7 +487,7 @@ export default function MyOwnPrayerPage() {
           </div>
 
           <p className="mt-8 text-center text-xs text-[#5f736b]">
-            My Own Prayer is an project by Ashiqul Haque Borno.
+            My Own Prayer is a project by Ashiqul Haque Borno.
           </p>
         </div>
       </section>
