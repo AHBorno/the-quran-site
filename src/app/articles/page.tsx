@@ -5,11 +5,11 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Articles & Guides",
   description:
-    "Practical guides to Android app development, APK releases, prayer-time applications, Qibla direction, software testing, and Islamic technology.",
+    "Practical guides to Islamic technology, daily prayer times, Android app testing, prayer-time calculations, and Qibla direction.",
   keywords: [
     "Islamic technology",
-    "Android app development",
-    "APK release guide",
+    "daily prayer times explained",
+    "prayer time calculation",
     "prayer time app guide",
     "Qibla finder",
     "Android app testing",
@@ -19,24 +19,23 @@ export const metadata: Metadata = {
     type: "website",
     title: "Articles & Guides | The Quran Site",
     description:
-      "Practical software guides and development resources from The Quran Site.",
+      "Understand Islamic technology, prayer times, Qibla direction, and useful software.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Articles & Guides | The Quran Site",
     description:
-      "Practical software guides and development resources from The Quran Site.",
+      "Understand Islamic technology, prayer times, Qibla direction, and useful software.",
   },
 };
 
 const articles = [
   {
-    category: "Android Development",
+    category: "Prayer Technology",
     readTime: "8 min read",
-    title:
-      "Building a Reliable Prayer-Time App: What Developers Should Consider",
+    title: "Building a Reliable Prayer-Time App: What Developers Should Consider",
     description:
-      "Explore the technical decisions behind prayer-time applications, including location, calculation methods, time zones, offline access, and notifications.",
+      "Explore location, calculation methods, time zones, offline access, and notifications in prayer-time applications.",
     href: "#prayer-time-guide",
   },
   {
@@ -44,7 +43,7 @@ const articles = [
     readTime: "6 min read",
     title: "Testing an Android App Before Sharing It With Users",
     description:
-      "A practical checklist for testing installation, permissions, screen layouts, notifications, updates, and common failure cases.",
+      "A practical checklist for testing installation, permissions, screen layouts, notifications, updates, and common errors.",
     href: "#android-testing-guide",
   },
   {
@@ -52,16 +51,16 @@ const articles = [
     readTime: "6 min read",
     title: "How a Qibla Finder Works on a Smartphone",
     description:
-      "Understand how geographical calculations and a phone's compass sensors help indicate the direction of the Kaaba.",
+      "Understand how geographical calculations and phone compass sensors work together to indicate the Qibla direction.",
     href: "#qibla-guide",
   },
   {
-    category: "Android Development",
-    readTime: "8 min read",
-    title: "Building and Releasing an Android App: A Practical Guide",
+    category: "Prayer Guide",
+    readTime: "7 min read",
+    title: "Understanding Daily Prayer Times: A Practical Guide",
     description:
-      "Learn how to prepare an Android app for distribution, test an APK, organize releases, communicate privacy information, and manage updates.",
-    href: "#android-app-release-guide",
+      "Learn about the five daily prayers, why their times change, how location affects timings, and how to check them responsibly.",
+    href: "#daily-prayer-times-guide",
   },
 ];
 
@@ -84,7 +83,7 @@ export default function ArticlesPage() {
 
           <div className="mt-10 max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-400">
-              Articles &amp; Guides
+              Articles & Guides
             </p>
 
             <h1 className="mt-5 text-4xl font-semibold tracking-tight text-emerald-50 sm:text-5xl lg:text-6xl">
@@ -92,9 +91,9 @@ export default function ArticlesPage() {
             </h1>
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-[#a7b8b1] sm:text-lg">
-              Explore technical explanations, app-testing checklists, release
-              guides, and development resources covering the challenges involved
-              in building useful digital tools.
+              Explore helpful explanations of prayer times, Qibla direction,
+              app testing, and the technology behind useful Islamic digital
+              tools.
             </p>
           </div>
         </div>
@@ -112,9 +111,11 @@ export default function ArticlesPage() {
             </h2>
 
             <p className="mt-5 leading-8 text-[#899b94]">
-              These guides explain practical concepts and testing procedures.
-              Actual implementation details may vary by device, software
-              version, location, and the tools used by a developer.
+              These guides cover practical concepts, common questions, and
+              useful checks for people who use or develop digital tools.
+              Prayer-time information can vary according to location and
+              calculation convention, so always check the settings relevant
+              to your community.
             </p>
           </div>
 
@@ -122,7 +123,7 @@ export default function ArticlesPage() {
             {articles.map((article) => (
               <article
                 key={article.href}
-                className="flex flex-col rounded-2xl border border-emerald-400/10 bg-[#0a231b] p-6 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/25"
+                className="flex flex-col rounded-2xl border border-emerald-400/10 bg-[#0a231b] p-7 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/25"
               >
                 <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400">
                   {article.category}
@@ -152,23 +153,23 @@ export default function ArticlesPage() {
         </div>
       </section>
 
+      {/* GUIDE 1: PRAYER-TIME APP DEVELOPMENT */}
       <section
         id="prayer-time-guide"
         className="scroll-mt-24 border-t border-emerald-400/10"
       >
         <div className="mx-auto max-w-4xl px-6 py-16 lg:px-8 lg:py-20">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-emerald-400">
-            Android Development
+            Prayer Technology
           </p>
 
           <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-tight text-emerald-50 sm:text-4xl">
-            Building a Reliable Prayer-Time App: What Developers Should
-            Consider
+            Building a Reliable Prayer-Time App: What Developers Should Consider
           </h2>
 
           <p className="mt-5 text-sm text-[#788b84]">
-            A technical introduction to the calculations, device features, and
-            testing decisions behind prayer-time applications.
+            A technical introduction to the calculations, device features,
+            and testing decisions behind prayer-time applications.
           </p>
 
           <div className="mt-8 space-y-5 text-base leading-8 text-[#a7b8b1]">
@@ -193,9 +194,9 @@ export default function ArticlesPage() {
             </p>
 
             <p>
-              Location permissions should also be handled carefully. Explain
-              why location is needed, request permission only when necessary,
-              and provide a manual location option if the application supports
+              Location permissions should be handled carefully. Explain why
+              location is needed, request permission only when necessary, and
+              provide a manual location option if the application supports
               one. Never assume that a device's location is always available
               or accurate.
             </p>
@@ -205,12 +206,11 @@ export default function ArticlesPage() {
             </h3>
 
             <p>
-              A calculation can appear incorrect if the application mixes UTC,
+              A calculation can appear incorrect if an application mixes UTC,
               local time, and a device's time zone. Developers should test
-              daylight-saving changes where applicable, manual time-zone
-              changes, travel between locations, and dates that cross midnight.
-              The displayed date and the calculation date should remain
-              consistent with the application's documented behavior.
+              time-zone changes, travel between locations, and dates that
+              cross midnight. The displayed date and calculation date should
+              remain consistent with the application's documented behavior.
             </p>
 
             <h3 className="pt-3 text-xl font-semibold text-emerald-50">
@@ -245,42 +245,18 @@ export default function ArticlesPage() {
               prayer-time settings.
             </p>
 
-            <p>
-              Avoid promising that notifications will always be delivered at
-              an exact time on every Android device. Explain relevant
-              limitations and provide troubleshooting steps when the operating
-              system restricts background activity.
-            </p>
-
             <h3 className="pt-3 text-xl font-semibold text-emerald-50">
               5. A practical testing checklist
             </h3>
 
             <ul className="list-disc space-y-2 pl-6">
-              <li>
-                Compare calculated times with a trusted reference for the same
-                location and calculation method.
-              </li>
+              <li>Compare calculated times with a trusted reference for the same location and calculation method.</li>
               <li>Test multiple cities, time zones, and calendar dates.</li>
-              <li>
-                Verify that permission denial does not crash the application.
-              </li>
-              <li>
-                Test offline startup, reconnection, and recovery from failed
-                requests.
-              </li>
-              <li>
-                Check notification settings and scheduled alerts on different
-                devices.
-              </li>
-              <li>
-                Test small screens, different display sizes, and supported
-                languages.
-              </li>
-              <li>
-                Verify upgrades from previous versions and document known
-                limitations.
-              </li>
+              <li>Verify that permission denial does not crash the application.</li>
+              <li>Test offline startup, reconnection, and recovery from failed requests.</li>
+              <li>Check notification settings and scheduled alerts on different devices.</li>
+              <li>Test small screens, different display sizes, and supported languages.</li>
+              <li>Verify upgrades from previous versions and document known limitations.</li>
             </ul>
 
             <h3 className="pt-3 text-xl font-semibold text-emerald-50">
@@ -323,6 +299,7 @@ export default function ArticlesPage() {
         </div>
       </section>
 
+      {/* GUIDE 2: ANDROID APP TESTING */}
       <section
         id="android-testing-guide"
         className="scroll-mt-24 border-t border-emerald-400/10 bg-[#061d16]"
@@ -386,19 +363,12 @@ export default function ArticlesPage() {
             </h3>
 
             <ul className="list-disc space-y-2 pl-6">
-              <li>
-                Confirm the package name, version number, and release notes.
-              </li>
+              <li>Confirm the package name, version number, and release notes.</li>
               <li>Install the release build on a clean test device.</li>
               <li>Test the main features and common error scenarios.</li>
-              <li>
-                Check readability, navigation, and layout on small screens.
-              </li>
+              <li>Check readability, navigation, and layout on small screens.</li>
               <li>Verify external links and support contact details.</li>
-              <li>
-                Provide clear installation instructions and disclose known
-                issues.
-              </li>
+              <li>Provide clear installation instructions and disclose known issues.</li>
             </ul>
 
             <p>
@@ -411,6 +381,7 @@ export default function ArticlesPage() {
         </div>
       </section>
 
+      {/* GUIDE 3: QIBLA FINDER */}
       <section
         id="qibla-guide"
         className="scroll-mt-24 border-t border-emerald-400/10"
@@ -463,22 +434,11 @@ export default function ArticlesPage() {
             </h3>
 
             <ul className="list-disc space-y-2 pl-6">
-              <li>
-                Enable location or enter the correct location if the app
-                supports manual selection.
-              </li>
-              <li>
-                Move away from strong magnetic sources and large metal objects.
-              </li>
+              <li>Enable location or enter the correct location if the app supports manual selection.</li>
+              <li>Move away from strong magnetic sources and large metal objects.</li>
               <li>Follow the device or app's calibration instructions.</li>
-              <li>
-                Hold the phone steadily and check that its heading responds
-                sensibly as you turn.
-              </li>
-              <li>
-                Compare the indicated direction with a reliable reference if
-                the result seems unusual.
-              </li>
+              <li>Hold the phone steadily and check that its heading responds sensibly as you turn.</li>
+              <li>Compare the indicated direction with a reliable reference if the result seems unusual.</li>
             </ul>
 
             <p>
@@ -501,242 +461,220 @@ export default function ArticlesPage() {
         </div>
       </section>
 
+      {/* GUIDE 4: UNDERSTANDING DAILY PRAYER TIMES */}
       <section
-        id="android-app-release-guide"
+        id="daily-prayer-times-guide"
         className="scroll-mt-24 border-t border-emerald-400/10 bg-[#061d16]"
       >
         <div className="mx-auto max-w-4xl px-6 py-16 lg:px-8 lg:py-20">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-emerald-400">
-            Android Development
+            Prayer Guide
           </p>
 
           <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-tight text-emerald-50 sm:text-4xl">
-            Building and Releasing an Android App: A Practical Guide
+            Understanding Daily Prayer Times: A Practical Guide
           </h2>
 
           <p className="mt-5 text-sm text-[#788b84]">
-            A practical overview of preparing an Android application for
-            distribution, documenting its features, and maintaining releases.
+            Learn what the five daily prayer times represent, why their clock
+            times change, and how to check a timetable carefully.
           </p>
 
           <div className="mt-8 space-y-5 text-base leading-8 text-[#a7b8b1]">
             <p>
-              Building an Android application is only one part of making
-              software available to users. A useful release also needs a
-              suitable installation package, clear instructions, understandable
-              privacy information, and a way for users to report problems.
-              These details help people make informed decisions before
-              installing an application.
+              The five obligatory daily prayers are Fajr, Dhuhr, Asr, Maghrib,
+              and Isha. Their times are connected to the position of the Sun
+              and the progression of the day. Because sunrise and sunset change
+              throughout the year and differ from place to place, prayer times
+              do not remain fixed at the same clock time every day.
+            </p>
+
+            <p>
+              A prayer timetable or app can help people plan their day and
+              receive reminders. To use one properly, it helps to understand
+              what each time represents and why the location and settings
+              selected in the app matter.
             </p>
 
             <h3 className="pt-3 text-xl font-semibold text-emerald-50">
-              1. Decide what the release should contain
+              1. Fajr: The dawn prayer
             </h3>
 
             <p>
-              Before preparing a release, list the features that are actually
-              available and identify any known limitations. Check the app name,
-              version number, package identity, supported Android versions,
-              and installation requirements. The release description should
-              match the application users will receive, rather than promising
-              features that are still planned.
+              Fajr begins at true dawn, when the morning light appears along
+              the horizon, and ends at sunrise. The beginning of Fajr is
+              commonly calculated using the Sun's position below the horizon.
+              Different calculation conventions use different angles, so
+              published timetables may not always show identical times.
             </p>
 
             <p>
-              It is also helpful to keep a record of changes between versions.
-              A concise changelog can explain newly added features, resolved
-              issues, and important behavior changes. This gives returning
-              users a clearer understanding of what has changed.
+              When comparing two prayer timetables, check whether they use
+              the same calculation convention and location before assuming
+              one is incorrect.
             </p>
 
             <h3 className="pt-3 text-xl font-semibold text-emerald-50">
-              2. Understand the APK file
+              2. Dhuhr: The midday prayer
             </h3>
 
             <p>
-              An Android Package Kit, commonly called an APK, is an Android
-              application installation package. It can be distributed through
-              a supported app store or shared through another distribution
-              channel. The appropriate approach depends on the application's
-              release requirements and intended audience.
+              Dhuhr begins after the Sun passes its highest point in the sky
+              for the day. This event is called solar noon. Solar noon is not
+              always exactly 12:00 on a clock because clock time depends on
+              the time zone, the date, and the location.
             </p>
 
             <p>
-              Before sharing an APK, verify that the file is complete and
-              comes from the intended release. Use a clear filename and
-              provide the version number, supported Android requirements,
-              release notes, and installation instructions alongside it.
-              Do not rename an unrelated file and present it as a verified
-              application package.
+              A prayer timetable accounts for the local date and geographical
+              position when determining the displayed time.
             </p>
 
             <h3 className="pt-3 text-xl font-semibold text-emerald-50">
-              3. Test the installation process
+              3. Asr: The afternoon prayer
             </h3>
 
             <p>
-              Test the actual release package rather than checking only the
-              development preview. Where possible, install it on a clean test
-              device and verify that the application opens, its main features
-              work, and its permissions are requested appropriately.
+              Asr is an afternoon prayer whose beginning is determined using
+              the length of an object's shadow in relation to its height,
+              according to the relevant calculation convention. Different
+              jurisprudential methods are commonly used for this calculation,
+              which is one reason two otherwise reliable timetables may show
+              different Asr times.
             </p>
 
-            <ul className="list-disc space-y-2 pl-6">
-              <li>Check that the package installs without unexpected errors.</li>
-              <li>Open the app and test its main user journeys.</li>
-              <li>Check layout, text readability, and navigation.</li>
+            <p>
+              If the Asr times in two apps differ, review the selected Asr
+              calculation setting and consult a trusted local religious
+              authority if you are unsure which convention to follow.
+            </p>
+
+            <h3 className="pt-3 text-xl font-semibold text-emerald-50">
+              4. Maghrib: The sunset prayer
+            </h3>
+
+            <p>
+              Maghrib begins after sunset. The time therefore changes with
+              the date and location. Local terrain and the accuracy of the
+              location information can also matter when observing sunset
+              directly, while a calculated timetable estimates the event
+              using astronomical data.
+            </p>
+
+            <h3 className="pt-3 text-xl font-semibold text-emerald-50">
+              5. Isha: The night prayer
+            </h3>
+
+            <p>
+              Isha begins after the disappearance of evening twilight. The
+              calculation convention selected by a timetable can affect how
+              this time is determined. In some places and seasons, twilight
+              conditions make the calculation more complex, and local
+              religious guidance may be important.
+            </p>
+
+            <h3 className="pt-3 text-xl font-semibold text-emerald-50">
+              Why prayer times change every day
+            </h3>
+
+            <p>
+              Earth's rotation produces the daily movement of the Sun across
+              the sky, while Earth's tilted axis and orbit cause daylight
+              patterns to change over the year. As a result, sunrise, sunset,
+              and the other solar reference points shift over time. The
+              amount of change depends on the location and season.
+            </p>
+
+            <p>
+              A prayer app needs an accurate location, the correct local date
+              and time zone, and an appropriate calculation convention. If
+              any of these settings are wrong, the displayed times may differ
+              from a local timetable.
+            </p>
+
+            <h3 className="pt-3 text-xl font-semibold text-emerald-50">
+              How to check your prayer timetable
+            </h3>
+
+            <ol className="list-decimal space-y-3 pl-6">
               <li>
-                Test features that rely on location, sensors, or notifications.
+                <strong className="text-emerald-50">Check your location.</strong>{" "}
+                Make sure the app is using your current city or the correct
+                manually selected location.
               </li>
               <li>
-                Test behavior with and without an internet connection where
-                relevant.
+                <strong className="text-emerald-50">Check the date and time zone.</strong>{" "}
+                Travel, device settings, and date changes can affect the
+                displayed timetable.
               </li>
               <li>
-                Check updates from a previous version if upgrading is supported.
+                <strong className="text-emerald-50">Review calculation settings.</strong>{" "}
+                Fajr, Isha, and Asr can vary according to the convention
+                selected.
               </li>
-            </ul>
-
-            <p>
-              Results should be recorded accurately. Testing one device or
-              Android version does not establish compatibility with every
-              device. Clearly state known requirements and limitations instead
-              of making universal compatibility claims.
-            </p>
+              <li>
+                <strong className="text-emerald-50">Compare like with like.</strong>{" "}
+                Compare your app with a trusted local timetable using the
+                same location and relevant calculation settings.
+              </li>
+              <li>
+                <strong className="text-emerald-50">Check after changing location.</strong>{" "}
+                If you travel, make sure the app updates the location and
+                timetable as intended.
+              </li>
+            </ol>
 
             <h3 className="pt-3 text-xl font-semibold text-emerald-50">
-              4. Choose a distribution method
+              Using a prayer-time app responsibly
             </h3>
 
             <p>
-              An application can be distributed through an app marketplace or
-              through a direct download page. Each method has different
-              requirements. App marketplaces generally have their own developer
-              registration, review, signing, and policy processes. Direct
-              distribution requires the publisher to provide a trustworthy
-              download source and clear installation guidance.
+              Prayer-time applications are useful for viewing daily schedules
+              and setting reminders, but their accuracy depends on their data,
+              calculation method, and device settings. Notifications can also
+              be affected by battery restrictions and operating-system
+              permissions. Check the timetable directly if a reminder appears
+              unexpectedly or seems inconsistent.
             </p>
 
             <p>
-              For example, a project may publish its release files and changelog
-              on a version-control hosting service such as GitHub. A release
-              page can keep the version information and associated files
-              together. Users should be able to distinguish official release
-              files from source code, experimental builds, and unrelated
-              attachments.
-            </p>
-
-            <p>
-              When providing a download link, identify the file clearly and
-              direct users to the intended release. Explain that Android may
-              display a warning when an app is installed from outside a
-              recognized app store. Users should only proceed when they trust
-              the source and understand what they are installing.
+              My Own Prayer provides prayer-related tools designed to help
+              users view daily timings and manage reminders. You can explore
+              its documented features, supported languages, installation
+              information, and version history on its app page.
             </p>
 
             <h3 className="pt-3 text-xl font-semibold text-emerald-50">
-              5. Explain privacy and permissions
+              Final thoughts
             </h3>
 
             <p>
-              Users should be able to understand what an app does with device
-              permissions and information. Document the permissions the app
-              actually uses, why they are needed, and whether any information
-              is transmitted to an external service. If the app does not collect
-              personal data, make sure that statement accurately reflects the
-              app's behavior and any third-party services it includes.
-            </p>
-
-            <p>
-              A privacy policy should describe the real implementation rather
-              than simply claiming that no data is collected. Review the app's
-              behavior, libraries, analytics, advertising components, and
-              network requests before making such a statement. Keep the policy
-              accessible and update it when relevant behavior changes.
-            </p>
-
-            <h3 className="pt-3 text-xl font-semibold text-emerald-50">
-              6. Maintain versions and updates
-            </h3>
-
-            <p>
-              Releasing an application is an ongoing process. Maintain a
-              version history that records meaningful changes, known issues,
-              and fixes. Use consistent version numbers and make it clear which
-              release is current. Keep copies of release files and relevant
-              project records so that a previous version can be identified
-              when investigating a reported problem.
-            </p>
-
-            <p>
-              Before publishing an update, test the new package and review
-              changes to permissions, settings, and existing user data.
-              Installation and upgrade behavior may differ, so do not assume
-              that a successful fresh installation proves every update path
-              works correctly.
-            </p>
-
-            <h3 className="pt-3 text-xl font-semibold text-emerald-50">
-              7. Make support straightforward
-            </h3>
-
-            <p>
-              Give users a clear way to report bugs or ask questions. Useful
-              reports often include the app version, Android version, device
-              model, the steps that caused the problem, and what the user
-              expected to happen. Remind users not to include passwords,
-              private documents, or other sensitive information in a bug
-              report.
-            </p>
-
-            <p>
-              A helpful support page can also explain common installation
-              problems, known limitations, and how to find the current release.
-              Clear documentation can reduce confusion and help users determine
-              whether an issue is related to the application, device settings,
-              or installation method.
-            </p>
-
-            <h3 className="pt-3 text-xl font-semibold text-emerald-50">
-              Final release checklist
-            </h3>
-
-            <ul className="list-disc space-y-2 pl-6">
-              <li>Confirm the app name, version, and release description.</li>
-              <li>Test the actual installation package.</li>
-              <li>Verify the official download link and file.</li>
-              <li>Document supported devices and known limitations.</li>
-              <li>Review permissions and ensure privacy statements are accurate.</li>
-              <li>Publish a useful changelog and installation instructions.</li>
-              <li>Provide a contact method for bug reports and support.</li>
-            </ul>
-
-            <p>
-              A well-prepared release is more than a downloadable file. It
-              combines a usable application with accurate documentation,
-              sensible testing, transparent privacy information, and a
-              maintainable update process. These practices help users
-              understand what they are installing and help developers manage
-              future improvements.
+              Understanding what the five daily prayer times represent makes
+              it easier to interpret a timetable and identify settings that
+              may need attention. Location, date, time zone, and calculation
+              convention are all important when comparing displayed times.
             </p>
 
             <p className="text-sm text-[#788b84]">
-              This guide provides general technical information. Exact
-              distribution requirements, Android behavior, and marketplace
-              policies may change, so consult the relevant official
-              documentation before publishing a release.
+              This article provides general educational information and is
+              not a religious ruling. For decisions about the correct prayer
+              times or calculation convention for your community, follow
+              guidance from a trusted local religious authority.
             </p>
           </div>
 
           <div className="mt-10 rounded-2xl border border-emerald-400/15 bg-[#0a231b] p-6 sm:p-8">
-            <h3 className="text-xl font-semibold text-emerald-50">
-              See a real project
+            <p className="text-sm font-semibold uppercase tracking-[0.15em] text-emerald-400">
+              Related app
+            </p>
+
+            <h3 className="mt-3 text-xl font-semibold text-emerald-50">
+              My Own Prayer
             </h3>
 
             <p className="mt-3 leading-7 text-[#899b94]">
-              Explore My Own Prayer to see its documented features,
-              installation instructions, compatibility information, and
-              version history.
+              Explore prayer times, prayer notifications, Qibla Finder, the
+              Hijri Calendar, Tasbeeh Counter, and other documented features.
             </p>
 
             <Link
@@ -749,6 +687,7 @@ export default function ArticlesPage() {
         </div>
       </section>
 
+      {/* FINAL CALL TO ACTION */}
       <section className="border-t border-emerald-400/10 bg-[#04150f]">
         <div className="mx-auto max-w-4xl px-6 py-16 text-center lg:py-20">
           <h2 className="text-2xl font-semibold text-emerald-50 sm:text-3xl">
