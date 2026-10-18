@@ -755,10 +755,19 @@ export default function MyOwnPrayerPage() {
                 </p>
               </div>
 
-              <div>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href="https://forms.gle/ChdZvxk8KoebLEYb8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#34d399] px-6 text-sm font-semibold text-[#051913] transition hover:bg-[#6ee7b7]"
+                >
+                  Report a Bug
+                </a>
+
                 <Link
                   href="/contact"
-                  className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#34d399] px-6 text-sm font-semibold text-[#051913] transition hover:bg-[#6ee7b7]"
+                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-emerald-400/20 bg-[#0a231b] px-6 text-sm font-semibold text-emerald-100 transition hover:border-emerald-400/40 hover:bg-[#0f2e23]"
                 >
                   Contact the developer
                 </Link>
