@@ -1,10 +1,12 @@
+
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Windows Software",
   description:
-    "Explore free Windows software developed by The Quran Site, including My Own Quran and LearnQuran, independent projects for Quran learning, translation, and recitation.",
+    "Explore Windows software developed by The Quran Site, including My Own Quran and LearnQuran for Quran learning, translation, and recitation.",
   keywords: [
     "Islamic Windows software",
     "free Islamic software",
@@ -19,13 +21,13 @@ export const metadata: Metadata = {
     type: "website",
     title: "Windows Software | The Quran Site",
     description:
-      "Explore independent Windows software projects developed by The Quran Site for Quran learning, translation, recitation, and related digital experiences.",
+      "Explore Windows software developed by The Quran Site for Quran learning, translation, recitation, and related digital experiences.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Windows Software | The Quran Site",
     description:
-      "Explore independent Windows software projects developed by The Quran Site for Quran learning, translation, recitation, and related digital experiences.",
+      "Explore Windows software developed by The Quran Site for Quran learning, translation, and recitation.",
   },
 };
 
@@ -54,6 +56,23 @@ const software = [
   },
 ];
 
+function SiteLogo({ size = 64 }: { size?: number }) {
+  return (
+    <div
+      className="flex shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-emerald-400/20 bg-[#0a231b] p-2 shadow-[0_0_30px_rgba(52,211,153,0.08)]"
+      style={{ width: size, height: size }}
+    >
+      <Image
+        src="/icon.png"
+        alt="The Quran Site logo"
+        width={size}
+        height={size}
+        className="h-full w-full object-contain"
+      />
+    </div>
+  );
+}
+
 export default function SoftwarePage() {
   return (
     <main>
@@ -70,9 +89,9 @@ export default function SoftwarePage() {
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-[#9aaca5]">
-              Explore independent Windows software projects created to use
-              technology in practical ways for Quran learning, translation,
-              recitation, and related digital experiences.
+              Explore Windows software projects created to use technology in
+              practical ways for Quran learning, translation, recitation, and
+              related digital experiences.
             </p>
           </div>
         </div>
@@ -94,9 +113,8 @@ export default function SoftwarePage() {
 
             <div className="space-y-5 text-base leading-8 text-[#9aaca5]">
               <p>
-                These projects are independently developed as part of an
-                ongoing effort to explore how software and technology can be
-                used for beneficial Islamic purposes.
+                These projects explore how software and technology can be used
+                for beneficial Islamic purposes.
               </p>
 
               <p>
@@ -143,9 +161,7 @@ export default function SoftwarePage() {
                 {/* CARD TOP */}
                 <div className="border-b border-emerald-400/10 bg-[#0c3729] p-8">
                   <div className="flex items-start justify-between gap-5">
-                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-emerald-400/20 bg-[#067756] text-lg font-bold text-emerald-50 shadow-[0_0_30px_rgba(52,211,153,0.08)]">
-                      QS
-                    </div>
+                    <SiteLogo />
 
                     <div className="text-right">
                       <div className="text-xs font-semibold text-emerald-400">
@@ -208,17 +224,17 @@ export default function SoftwarePage() {
             <div className="grid gap-10 md:grid-cols-[1fr_auto] md:items-center">
               <div>
                 <div className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-400">
-                  Independent projects
+                  Development updates
                 </div>
 
                 <h2 className="mt-4 text-2xl font-semibold tracking-tight text-emerald-50 sm:text-3xl">
-                  Built independently. Improved continuously.
+                  Built with care. Improved continuously.
                 </h2>
 
                 <p className="mt-5 max-w-2xl leading-8 text-[#899b94]">
                   The software published on The Quran Site is developed as
-                  independent personal projects. Releases, features, and
-                  compatibility may change as development and testing continue.
+                  personal projects. Releases, features, and compatibility may
+                  change as development and testing continue.
                 </p>
               </div>
 
@@ -236,8 +252,8 @@ export default function SoftwarePage() {
       {/* APPS CTA */}
       <section className="border-t border-emerald-400/10">
         <div className="mx-auto max-w-4xl px-6 py-24 text-center lg:py-32">
-          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-emerald-400/20 bg-[#067756] text-xl font-bold text-emerald-50 shadow-[0_0_30px_rgba(52,211,153,0.08)]">
-            QS
+          <div className="mx-auto flex justify-center">
+            <SiteLogo size={64} />
           </div>
 
           <h2 className="mt-7 text-3xl font-semibold tracking-tight text-emerald-50 sm:text-4xl">
@@ -246,7 +262,7 @@ export default function SoftwarePage() {
 
           <p className="mx-auto mt-5 max-w-xl leading-8 text-[#899b94]">
             Explore the Android applications developed as part of The Quran
-            Site's software projects.
+            Site&apos;s software projects.
           </p>
 
           <Link
