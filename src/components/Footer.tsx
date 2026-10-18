@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -30,14 +31,14 @@ export default function Footer() {
             </Link>
 
             <p className="mt-6 max-w-md text-sm leading-7 text-[#788b84]">
-              An independent software and technology project creating useful
-              digital tools for Quran learning, prayer management, and everyday
-              Islamic activities.
+              A software and technology project creating useful digital tools
+              for Quran learning, prayer management, and everyday Islamic
+              activities.
             </p>
 
             <p className="mt-4 max-w-md text-xs leading-6 text-[#5f736b]">
-              Built independently with a focus on simplicity, usefulness, and
-              continuous learning.
+              Built with a focus on simplicity, usefulness, and continuous
+              learning.
             </p>
           </div>
 
@@ -125,9 +126,9 @@ export default function Footer() {
 
         <div className="mt-14 flex flex-col gap-4 border-t border-emerald-400/10 pt-7 text-xs text-[#5f736b] sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} The Quran Site &amp; Ashiqul Haque Borno. All rights reserved.
+            © {new Date().getFullYear()} The Quran Site &amp; Ashiqul Haque
+            Borno. All rights reserved.
           </p>
-
         </div>
       </div>
     </footer>
