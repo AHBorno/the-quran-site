@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -209,7 +210,7 @@ export default function AppsPage() {
               [
                 "03",
                 "Technology",
-                "Independent software projects built while learning, experimenting, and improving.",
+                "Software projects built while learning, experimenting, and improving.",
               ],
             ].map(([number, title, description]) => (
               <div
@@ -240,17 +241,17 @@ export default function AppsPage() {
             <div className="grid gap-10 md:grid-cols-[1fr_auto] md:items-center">
               <div>
                 <div className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-400">
-                  Independent development
+                  Development updates
                 </div>
 
                 <h2 className="mt-4 text-2xl font-semibold tracking-tight text-emerald-50 sm:text-3xl">
-                  Built independently. Improved continuously.
+                  Built with care. Improved continuously.
                 </h2>
 
                 <p className="mt-5 max-w-2xl leading-8 text-[#899b94]">
-                  These applications are independent personal projects.
-                  Features, compatibility, and design may change as development
-                  and testing continue.
+                  These applications are personal projects. Features,
+                  compatibility, and design may change as development and
+                  testing continue.
                 </p>
               </div>
 
@@ -268,8 +269,14 @@ export default function AppsPage() {
       {/* SOFTWARE CTA */}
       <section className="border-t border-emerald-400/10">
         <div className="mx-auto max-w-4xl px-6 py-24 text-center lg:py-32">
-          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-emerald-400/20 bg-[#067756] text-xl font-bold text-emerald-50 shadow-[0_0_30px_rgba(52,211,153,0.08)]">
-            QS
+          <div className="mx-auto flex h-20 w-20 items-center justify-center overflow-hidden rounded-2xl border border-emerald-400/20 bg-[#0a231b] p-2 shadow-[0_0_30px_rgba(52,211,153,0.08)]">
+            <Image
+              src="/icon.png"
+              alt="The Quran Site logo"
+              width={80}
+              height={80}
+              className="h-full w-full object-contain"
+            />
           </div>
 
           <h2 className="mt-7 text-3xl font-semibold tracking-tight text-emerald-50 sm:text-4xl">
@@ -277,8 +284,7 @@ export default function AppsPage() {
           </h2>
 
           <p className="mx-auto mt-5 max-w-xl leading-8 text-[#899b94]">
-            Explore the Windows software developed as part of The Quran Site's
-            independent projects.
+            Explore the Windows software developed as part of The Quran Site.
           </p>
 
           <Link
