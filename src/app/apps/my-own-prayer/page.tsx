@@ -94,7 +94,7 @@ const features = [
 
 const versions = [
   {
-    version: "1.5 Beta",
+    version: "1.6 Beta",
     details: [
       "Reorganized the side menu.",
       "Added Settings.",
@@ -262,7 +262,7 @@ export default function MyOwnPrayerPage() {
           <div className="mt-10 grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
             <div>
               <div className="mb-5 inline-flex items-center rounded-full border border-emerald-400/15 bg-[#0a231b] px-3 py-1.5 text-xs font-medium text-emerald-300">
-                Android · v1.5 Beta
+                Android · v1.6 Beta
               </div>
 
               <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-emerald-50 sm:text-5xl lg:text-6xl">
@@ -284,7 +284,7 @@ export default function MyOwnPrayerPage() {
 
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
-                  href="https://github.com/AHBorno/My-Own-Prayer/releases/download/v1.5-beta/My.Own.Prayer.apk"
+                  href="https://github.com/AHBorno/My-Own-Prayer/releases/download/v1.6-beta/My.Own.Prayer.apk"
                   className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#34d399] px-6 text-sm font-semibold text-[#051913] transition hover:bg-[#6ee7b7]"
                 >
                   Download APK
