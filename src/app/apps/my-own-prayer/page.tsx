@@ -98,7 +98,7 @@ const versions = [
     details: [
       "Enhanced UI.",
       "Added Local Prayer Timings with new widget.",
-      "Added Notification Priority.",
+      "Added Notification Priority in settings.",
       "Fixed Tasbeeh Counter popping glitch.",
     ],
   },
