@@ -96,6 +96,15 @@ const versions = [
   {
     version: "1.6 Beta",
     details: [
+      "Enhanced UI.",
+      "Added "Local Prayer Timings" with new widget.",
+      "Added "Notification Priority".",
+      "Fixed Tasbeeh Counter popping glitch.",
+    ],
+  },
+{
+    version: "1.5 Beta",
+    details: [
       "Reorganized the side menu.",
       "Added Settings.",
       "Added Data Saver inside Settings.",
